@@ -1,6 +1,5 @@
 import java.util.*;
-
-public class message {
+public class Encrypter {
 
     static Scanner in = new Scanner(System.in);
     //Using Base62 to encrypt/decrypt the message.
@@ -49,47 +48,5 @@ public class message {
         System.out.println("Encrypted Text: " + encryptext);
         System.out.println("Your Decrypting Token: " + Token);
         System.out.println("-------------------------------------------------------------");
-//----------------------------------------------------------------------------------------------------------
-        //Decrypting the message
-        StringBuilder decryptext = new StringBuilder();
-        for (int i = 0; i < encryptext.length(); i++) {
-            char temp2 = encryptext.charAt(i);
-            char newChar2 = (char) (temp2 - ascii);
-            decryptext.append(newChar2);
-        }
-//----------------------------------------------------------------------------------------------------------
-        //Taking input of the token from the user to decrypt.
-        System.out.print("Enter the Token to Decrypt: ");
-        String checkToken = in.nextLine();
-        System.out.println("-------------------------------------------------------------");
-//----------------------------------------------------------------------------------------------------------
-        //Decrypting the token to check if it matches with the ascii value.
-        StringBuilder temp4 = new StringBuilder();
-        int index;
-        for (int i = checkToken.length() - 1; i >= 0; i--) {
-            temp4.append(checkToken.charAt(i));
-        }
-        String reversedToken = temp4.toString();
-
-        // Converting from Token back to ASCII.
-        int checkAscii = 0;
-        for (int i = 0; i < reversedToken.length(); i++) {
-            index = TokenEncrypterString.indexOf(reversedToken.charAt(i));
-            checkAscii = checkAscii * totalchar + index;
-        }
-
-        //Unscrambling the scrambled code.
-        int unscrambled;
-        unscrambled = (checkAscii / 15000000);
-//----------------------------------------------------------------------------------------------------------
-        //Printing the accurate statement depending on the token inputted
-        if (ascii == unscrambled) {
-            System.out.println("Decrypted Text: " + decryptext);
-            System.out.println("ASCII Changed by: " + ascii);
-        } else {
-            System.out.println("magi onnor message dekhar eto ki icche bara pod meredebo tor.");
-        }
-        System.out.println("-------------------------------------------------------------");
-//----------------------------------------------------------------------------------------------------------
     }
 }
