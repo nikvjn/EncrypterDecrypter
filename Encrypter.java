@@ -15,9 +15,9 @@ public class Encrypter {
         //Generating a random number to encrypt.
         int ascii = (int) (Math.random() * 51);
 
-        //If ascii = 0 or 32, replace with random number (41 here).
-        if (ascii == 0 || ascii == 32) {
-            ascii = 41;
+        //If ascii = 0 or 32, replace with random number unless its not
+        while (ascii == 0 || ascii == 32) {
+            ascii = (int) (Math.random() * 51);
         }
 //----------------------------------------------------------------------------------------------------------
         //Encrypting the message
