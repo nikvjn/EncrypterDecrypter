@@ -86,7 +86,7 @@ public class EncrypterDecrypter {
             System.out.println("Decrypted Text: " + decryptext);
             System.out.println("ASCII Changed by: " + ascii);
         } else {
-            System.out.println("magi onnor message dekhar eto ki icche bara pod meredebo tor.");
+            System.out.println("Token Invalid!");
         }
         System.out.println("-------------------------------------------------------------");
 //----------------------------------------------------------------------------------------------------------

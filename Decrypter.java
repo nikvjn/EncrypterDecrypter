@@ -44,6 +44,7 @@ public class Decrypter {
 //----------------------------------------------------------------------------------------------------------
         System.out.println("Decrypted Text: " + decryptext);
         System.out.println("ASCII (Based on Inputted Token): " + unscrambledascii);
+        System.out.println("Output seems wrong? Re-check your Token.");
         System.out.println("-------------------------------------------------------------");
 //----------------------------------------------------------------------------------------------------------
     }
